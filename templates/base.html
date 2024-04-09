@@ -12,13 +12,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <title>Online Bookstore</title>
+  <title>The Inkwell</title>
 </head>
 
 <body>
   <!--Nav Bar-->
   <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'list' %}">Online Bookstore</a>
+    <a class="navbar-brand" href="{% url 'list' %}">The Inkwell</a>
     <div class="btn-group dropright">
       <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {% if user.is_authenticated %}
@@ -43,7 +43,7 @@
         {% endif %}
         </div>
         <div>
-          <a href="{% url 'sell' %}">sell</a>
+          <a class="nav-link active" href="{% url 'sell' %}">Sell</a>
         </div>
     </div>
     </div>
