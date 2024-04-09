@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <br>
+        <label>Title:</label>
+        <input type="text" placeholder="" name="Title" required>
+     </br>
+
+     <br>
+        <label>Price:</label>
+        <input type="number" placeholder="" name="Price" required>
+    </br>
+
+    <br>
+        <label>Image:</label>
+        <input type="file"  name="Image" accept="image/jpg, image/jpeg, image/png" required>
+    </br>
+
+    <br>
+        <label>Description:</label>
+        <input type="text" name="Description" required>
+    </br>
+
+    <br>
+        <label>Author:</label>
+        <input type="text" name="Author" required>
+    
+    </br>
+
+    <br>
+        <label>Email for Contact:</label>
+        <input type="text" name="Email" required>
+    </br>
+
+    <br>
+        <input type="submit" value="Upload">
+    </br>
+</form>
+{% endblock %}
