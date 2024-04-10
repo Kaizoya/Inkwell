@@ -18,7 +18,7 @@
         <div class="card-body">
           <h4 class="card-title">{{ object.title }}</h4>
           <p class="card-text">Author: {{ object.author }}</p><hr>
-          <p class="card-text">Email: {{ object.email}}</p><hr>
+          <p class="card-text">Email: <a href="https://mail.google.com/mail/u/0/?fs=1&to={{ object.email }}&su=Wanting%20to%20purchase%20your%20book&tf=cm" target="_blank">{{ object.email }}</a></p><hr>
           <p class="card-text">{{ Book.description }}</p>
         </div>
       </div>
