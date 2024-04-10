@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="POST" enctype="multipart/form-data">
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'sell1.css' %}">
+
+<form class="sellbox" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <br>
         <label>Title:</label>
@@ -30,12 +35,12 @@
     </br>
 
     <br>
-        <label>Email for Contact:</label>
+        <label>Email:</label>
         <input type="text" name="Email" required>
     </br>
 
     <br>
-        <input type="submit" value="Upload">
+        <input class="upload-btn" type="submit" value="Upload">
     </br>
 </form>
 {% endblock %}
