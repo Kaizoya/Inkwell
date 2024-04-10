@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'sell1.css' %}">
+
+<form class="sellbox" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <br>
+        <label>Title:</label>
+        <input type="text" placeholder="" name="Title" required>
+     </br>
+
+     <br>
+        <label>Price:</label>
+        <input type="number" placeholder="" name="Price" required>
+    </br>
+
+    <br>
+        <label>Image:</label>
+        <input type="file"  name="Image" accept="image/jpg, image/jpeg, image/png" required>
+    </br>
+
+    <br>
+        <label>Description:</label>
+        <input type="text" name="Description" required>
+    </br>
+
+    <br>
+        <label>Author:</label>
+        <input type="text" name="Author" required>
+    
+    </br>
+
+    <br>
+        <label>Email:</label>
+        <input type="text" name="Email" required>
+    </br>
+
+    <br>
+        <input class="upload-btn" type="submit" value="Upload">
+    </br>
+</form>
+{% endblock %}
